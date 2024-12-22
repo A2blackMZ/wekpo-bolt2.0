@@ -31,7 +31,7 @@ export default function Login() {
       login({
         id: '1',
         email: data.email,
-        name: 'Test User',
+        name: 'User',
         role: 'merchant',
       });
       navigate('/');

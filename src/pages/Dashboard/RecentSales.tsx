@@ -3,9 +3,9 @@ import { Clock } from 'lucide-react';
 
 export function RecentSales() {
   const recentSales = [
-    { id: 1, product: 'Rice (5kg)', amount: '5,000 FCFA', time: '2 minutes ago' },
-    { id: 2, product: 'School Supplies Bundle', amount: '3,500 FCFA', time: '15 minutes ago' },
-    { id: 3, product: 'Cooking Oil (2L)', amount: '2,800 FCFA', time: '1 hour ago' },
+    { id: 1, product: 'Rice (5kg)', amount: '0 FCFA', time: '2 minutes ago' },
+    { id: 2, product: 'School Supplies Bundle', amount: '0 FCFA', time: '15 minutes ago' },
+    { id: 3, product: 'Cooking Oil (2L)', amount: '0.0 FCFA', time: '1 hour ago' },
   ];
 
   return (

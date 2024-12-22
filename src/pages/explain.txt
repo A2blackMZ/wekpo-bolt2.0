@@ -1,0 +1,38 @@
+La contrainte imposée sur le numéro de téléphone est la suivante :
+
+```typescript
+phone: z.string().regex(/^\\d{10}$/, 'Invalid phone number'),
+```
+
+### Explication
+1. **`^\\d{10}$`** :
+   - **`^`** : Indique que la correspondance doit commencer au début de la chaîne.
+   - **`\\d`** : Correspond à un chiffre (0–9).
+   - **`{10}`** : Indique qu'il doit y avoir exactement 10 chiffres.
+   - **`$`** : Indique que la correspondance doit se terminer à la fin de la chaîne.
+
+2. **Message d'erreur** : Si la chaîne ne correspond pas exactement à 10 chiffres, l'erreur `"Invalid phone number"` sera affichée.
+
+### Résultat
+Cette contrainte accepte uniquement des numéros de téléphone composés de 10 chiffres consécutifs. Elle ne permet :
+- Aucun espace ou caractère spécial (par exemple, `123 456 7890` ou `123-456-7890` seront invalides).
+- Pas de préfixes ou indicatifs internationaux (comme `+33` ou `+1`).
+
+---
+
+### Adaptation
+Si vous avez besoin d'une validation différente, voici quelques ajustements possibles :
+
+1. **Autoriser les espaces et tirets :**
+   ```typescript
+   phone: z.string().regex(/^\\d{3}[-\\s]?\\d{3}[-\\s]?\\d{4}$/, 'Invalid phone number'),
+   ```
+   Cela accepte des formats comme `123-456-7890` ou `123 456 7890`.
+
+2. **Inclure l'indicatif international :**
+   ```typescript
+   phone: z.string().regex(/^\\+?\\d{1,3}[-\\s]?\\d{10}$/, 'Invalid phone number'),
+   ```
+   Cela permet des numéros comme `+33 1234567890` ou `+1-123-456-7890`.
+
+Souhaitez-vous que j'adapte la validation à un format particulier ?

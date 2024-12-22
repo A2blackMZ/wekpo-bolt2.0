@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/layout/Header';
@@ -10,6 +11,8 @@ const Inventory = React.lazy(() => import('./pages/Inventory'));
 const Sales = React.lazy(() => import('./pages/Sales'));
 const Suppliers = React.lazy(() => import('./pages/Suppliers'));
 const Profile = React.lazy(() => import('./pages/Profile'));
+const SignUp = React.lazy(() => import('./pages/Signup'));
+const AccountConfirmation = React.lazy(() => import('./pages/AccountConfirmation'));
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
@@ -32,6 +35,8 @@ function App() {
         >
           <Routes>
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/confirm" element={<AccountConfirmation />} />
             <Route
               path="/"
               element={

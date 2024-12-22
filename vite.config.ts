@@ -5,7 +5,7 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 export default defineConfig({
   plugins: [react(), createHtmlPlugin()],
   server: {
-    port: 3000, // ou tout autre port
+    port: 3000, // autrefois 4173
     open: true,
   },
   build: {

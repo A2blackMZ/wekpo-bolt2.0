@@ -6,27 +6,27 @@ export function DashboardStats() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       <StatCard
         title="Total Sales"
-        value="150,000 FCFA"
+        value="0 FCFA"
         icon={<DollarSign className="h-6 w-6" />}
-        trend="+12.5%"
+        trend="+0%"
       />
       <StatCard
         title="Total Products"
         value="245"
         icon={<Package className="h-6 w-6" />}
-        trend="+3.2%"
+        trend="+0.0%"
       />
       <StatCard
         title="Today's Orders"
-        value="12"
+        value="0"
         icon={<ShoppingCart className="h-6 w-6" />}
-        trend="-2.4%"
+        trend="-1%"
       />
       <StatCard
         title="Revenue"
-        value="45,000 FCFA"
+        value="0 FCFA"
         icon={<TrendingUp className="h-6 w-6" />}
-        trend="+8.1%"
+        trend="+0%"
       />
     </div>
   );
